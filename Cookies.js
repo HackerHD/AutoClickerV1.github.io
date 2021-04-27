@@ -1,0 +1,3 @@
+var MD=MD||{};(async()=>{const CookieManager=class CookieManager{constructor(){this.nodes={};this.nodes.container=document.querySelector(".cookie-layer");this.nodes.accept=document.querySelector(".cookie-accept");var cookieSet=localStorage.getItem("cookie-set");if(!cookieSet){this.nodes.accept.addEventListener("click",this.onAllow.bind(this));this.nodes.container.classList.remove("hidden");}}
+onAllow(){localStorage.setItem("cookie-set","allow");this.nodes.container.classList.add("hidden");}}
+MD.CookieManager=CookieManager;})();window.addEventListener("DOMContentLoaded",async()=>{const cookies=new MD.CookieManager();});
